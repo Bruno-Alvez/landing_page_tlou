@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+.about {
+    background-color: variaveis.$corFundoSecundaria;
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;
+        }
+        
+        &__image {
+            max-width: 55%;
+            width: 100%;
+            margin-left: 40px;
+            margin-right: 56px;
+            border-radius: 10%;
+        }
+
+        &__text {
+            margin-right: 56px;
+            margin-bottom: 8px;
+            color: aliceblue;
+            font-family: Bluebird, sans-serif;
+            
+
+            @media (max-width: 768px) {
+                margin: 32px; 
+                margin-bottom: 8px;
+            }
+
+            &__title2 {
+                margin-bottom: 16px;
+                color: #ffff00e2;
+
+                @media (max-width: 768px) {
+                    margin-top: 16px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use 'variaveis';
+
+.hero {
+    background-color: variaveis.$corFundoPrincipal;
+    
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                    max-width: 380px;
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+        }
+            
+        
+        &__image {
+            img {
+                max-width: 400px;
+                width: 100%;
+
+                @media (max-width: 768px) {
+                    margin-top: 16px;
+
+                    &__image {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
